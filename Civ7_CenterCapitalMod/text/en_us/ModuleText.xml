@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizedText>
+    <!-- Names for the keybinds: must match the 'Name' field in input-actions.xml -->
+    <Row Tag="LOC_KEYBIND_FOCUS_CAPITAL">
+        <Text>Center Camera on Capital</Text>
+    </Row>
+    <Row Tag="LOC_KEYBIND_CYCLE_CITIES_FW">
+        <Text>Cycle Forward Through Cities</Text>
+    </Row>
+    <Row Tag="LOC_KEYBIND_CYCLE_CITIES_BW">
+        <Text>Cycle Backward Through Cities</Text>
+    </Row>
+
+    <!-- Descriptions for the keybinds: must match the 'Description' field -->
+    <Row Tag="LOC_KEYBIND_FOCUS_CAPITAL_DESC">
+        <Text>Snap the camera to your capital city</Text>
+    </Row>
+    <Row Tag="LOC_KEYBIND_CYCLE_CITIES_FW_DESC">
+        <Text>Cycle the camera forward through all of your cities</Text>
+    </Row>
+    <Row Tag="LOC_KEYBIND_CYCLE_CITIES_BW_DESC">
+        <Text>Cycle the camera backward through all of your cities</Text>
+    </Row>
+</LocalizedText>

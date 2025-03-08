@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <InputActionDefaultGestures>
+        <!-- Default to HOME for capital -->
+        <InsertOrIgnore
+            ActionId="camera-center-capital"
+            Index="0"
+            GestureType="KBMouse"
+            GestureData="KEY_HOME"
+        />
+        <!-- Default to PAGEUP for forward city-cycling -->
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-forward"
+            Index="0"
+            GestureType="KBMouse"
+            GestureData="KEY_PAGEUP"
+        />
+        <!-- Default to PAGEDOWN for backward city-cycling -->
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-backward"
+            Index="0"
+            GestureType="KBMouse"
+            GestureData="KEY_PAGEDOWN"
+        />
+    </InputActionDefaultGestures>
+</Database>
+<!--
+Common Key Identifiers
+Alphanumeric Keys
+KEY_0 through KEY_9
+KEY_A through KEY_Z
+Function Keys
+KEY_F1 through KEY_F12
+Arrow Keys
+KEY_UP
+KEY_DOWN
+KEY_LEFT
+KEY_RIGHT
+Editing / Navigation Keys
+KEY_BACKSPACE
+KEY_DELETE
+KEY_INSERT
+KEY_HOME
+KEY_END
+KEY_PAGEUP (sometimes KEY_PGUP)
+KEY_PAGEDOWN (sometimes KEY_PGDOWN)
+Whitespace / Control Keys
+KEY_TAB
+KEY_SPACE
+KEY_ENTER (or sometimes KEY_RETURN)
+KEY_ESCAPE
+Modifier Keys
+KEY_SHIFT
+KEY_ALT
+KEY_CONTROL (sometimes spelled KEY_CTRL in certain mods)
+Note: Caps Lock, Windows key, or other special keys may not always be recognized or may use different identifiers. Check for collisions or test them directly to confirm they’re supported in your environment.
+-->

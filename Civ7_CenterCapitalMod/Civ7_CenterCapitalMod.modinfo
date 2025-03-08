@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="civ7-center-capital-mod" version="1"
+    xmlns="ModInfo">
+    <Properties>
+        <Name>Civ7 Center Capital Mod</Name>
+        <Description>Centers camera on the capital and cycles cities with hotkeys.</Description>
+        <Authors>Janne Palo</Authors>
+        <AffectsSavedGames>0</AffectsSavedGames>
+        <SortIndex>9999</SortIndex>
+    </Properties>
+
+    <References>
+        <Mod id="base-standard" title="Base Game" />
+        <Mod id="core" title="Core Systems" />
+    </References>
+
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet/>
+        </Criteria>
+    </ActionCriteria>
+
+    <ActionGroups>
+        <!-- Load the database files so our custom actions exist in the input system -->
+        <ActionGroup id="center-capital-data" scope="shell" criteria="always">
+            <Actions>
+                <UpdateDatabase>
+                    <Item>data/input-actions.xml</Item>
+                    <Item>data/input-action-default-gestures.xml</Item>
+                    <Item>data/input-context-constraints.xml</Item>
+                </UpdateDatabase>
+                <UpdateText>
+                    <Item>text/keybinds-names.sql</Item>
+                    <Item>text/en_us/ModuleText.xml</Item>
+                </UpdateText>
+            </Actions>
+        </ActionGroup>
+
+        <!-- Load our UI script in game scope. This script also attempts to register the keybinding in the options UI. -->
+        <ActionGroup id="center-capital-ui" scope="game" criteria="always">
+            <Actions>
+                <UpdateText>
+                    <Item>text/keybinds-names.sql</Item>
+                </UpdateText>
+                <UIScripts>
+                    <Item>UI/focus-capital.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+
+    </ActionGroups>
+</Mod>

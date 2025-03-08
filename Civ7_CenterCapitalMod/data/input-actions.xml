@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <InputActions>
+        <!-- Action for focusing capital -->
+        <InsertOrIgnore
+            ActionId="camera-center-capital"
+            Name="LOC_KEYBIND_FOCUS_CAPITAL"
+            Description="LOC_KEYBIND_FOCUS_CAPITAL_DESC"
+            SortIndex="11000"
+        />
+        <!-- Action for cycling cities forward -->
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-forward"
+            Name="LOC_KEYBIND_CYCLE_CITIES_FW"
+            Description="LOC_KEYBIND_CYCLE_CITIES_FW_DESC"
+            SortIndex="11001"
+        />
+        <!-- Action for cycling cities backward -->
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-backward"
+            Name="LOC_KEYBIND_CYCLE_CITIES_BW"
+            Description="LOC_KEYBIND_CYCLE_CITIES_BW_DESC"
+            SortIndex="11002"
+        />
+    </InputActions>
+</Database>

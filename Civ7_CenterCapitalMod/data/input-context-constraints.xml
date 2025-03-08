@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <!-- Tells the game that these actions are allowed in the normal 'World' context. -->
+    <InputContextConstraints>
+        <InsertOrIgnore
+            ActionId="camera-center-capital"
+            ContextId="World"
+        />
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-forward"
+            ContextId="World"
+        />
+        <InsertOrIgnore
+            ActionId="camera-cycle-cities-backward"
+            ContextId="World"
+        />
+    </InputContextConstraints>
+</Database>
