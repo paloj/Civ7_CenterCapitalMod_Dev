@@ -174,6 +174,9 @@ Feel free to adapt this mod for your own needs! If you’d like to improve or ex
 
 More key identifiers can be found in the game installation directory:  
 **`/core/config/Input.xml`**  
-*(Thanks [beezany](https://forums.civfanatics.com/members/beezany.156525/) for the info)*
 
 Note: Caps Lock, Windows key, or other special keys may not always be recognized. Check for collisions or test them directly.
+
+Thanks for testing and suggestions:
+*[Finwickle] (https://forums.civfanatics.com/members/finwickle.295463/)*
+*[beezany](https://forums.civfanatics.com/members/beezany.156525/)*
