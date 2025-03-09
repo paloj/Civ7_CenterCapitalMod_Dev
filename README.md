@@ -1,4 +1,4 @@
-﻿# Civ7 Center Capital Mod
+# Civ7 Center Capital Mod
 -------------------------
 
 ### Features
