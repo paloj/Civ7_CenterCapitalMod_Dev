@@ -177,6 +177,6 @@ More key identifiers can be found in the game installation directory:
 
 Note: Caps Lock, Windows key, or other special keys may not always be recognized. Check for collisions or test them directly.
 
-Thanks for testing and suggestions:
-*[Finwickle] (https://forums.civfanatics.com/members/finwickle.295463/)*
+## Thanks for testing and suggestions:
+*[Finwickle](https://forums.civfanatics.com/members/finwickle.295463/)*
 *[beezany](https://forums.civfanatics.com/members/beezany.156525/)*
