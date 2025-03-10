@@ -10,8 +10,10 @@
 
 ## Version History
 ### **0.0.4** (Latest)
-- Added **`ENABLE_CONSOLE_ERRORS`** flag for easily toggling debug messages (set `true` for development, `false` for release).
+- Configurable city cycling order: 1. Grouped, 2. Alphabetical, 3. Geographical 4. Game default
 - Improved city cycling logic — city list now refreshes **only when cycling** for better performance.
+- Added **`ENABLE_CONSOLE_ERRORS`** flag for easily toggling debug messages (set `true` for development, `false` for release).
+- Added **timestamp logic** to refresh the city table only if the previous refresh was **over 20 seconds ago**.
 - Fixed issue where pressing 'Home' on a focused Capital wouldn't open the city details panel.
 - Improved internal logging system for better debugging during development.
 
@@ -76,6 +78,58 @@ GestureData="KEY_PAGEDOWN"
 ---
 
 ## New Features
+
+### **Configurable City Cycling Modes (New!)**
+The mod now offers **4 distinct city cycling modes** for improved navigation:
+
+1. **Default Order**  
+   - Player’s cities sorted by city ID in alphabetical order, starting with the capital.  
+2. **Alphabetical Order**  
+   - All cities are sorted alphabetically. The capital is forced to be at index 0.  
+3. **Geographical Order** *(Recommended)*  
+   - Cities are sorted by proximity to the capital, with an advanced **look-ahead pathfinding system** for optimal path creation.  
+   - Use this setting for a natural city navigation path.  
+4. **Game Default Order**  
+   - Uses the game’s native order — no sorting applied.  
+
+To configure the cycling mode:
+1. Open: `Civ7_CenterCapitalMod\UI\focus-capital.js`
+2. Locate this setting at the top of the file: const CYCLING_MODE = 3;
+
+3. Change the number to the desired mode:
+
+| Mode | Description                    |
+|------|--------------------------------|
+| 1     | Grouped Order                  |
+| 2     | Alphabetical Order             |
+| 3     | Geographical Order (Recommended) |
+| 4     | Game Default Order             |
+
+4. Save the file and restart the game.
+
+---
+
+### **Reset City-Cycle Index When Centering to Capital**
+By default, the mod resets the city cycle index after focusing on the Capital.  
+To **disable** this feature:
+
+1. Open: `Civ7_CenterCapitalMod\UI\focus-capital.js`
+2. Locate this setting at the top of the file:
+```
+const RESET_CYCLE = true;
+```
+3. Change `true` to `false`:
+```
+const RESET_CYCLE = false;
+```
+4. Save the file and restart the game.
+
+---
+
+### **Timestamp Logic for Efficient Refreshing (New!)**
+To improve performance, the mod now refreshes the city table only if the last refresh was **over 20 seconds ago**.
+- Located in `focus-capital.js`: const REFRESH_INTERVAL = 20000; // Time in milliseconds (20 seconds)
+
 
 ### **User-Configurable Camera Movement**
 1. Open: `Civ7_CenterCapitalMod\UI\focus-capital.js`
@@ -177,6 +231,6 @@ More key identifiers can be found in the game installation directory:
 
 Note: Caps Lock, Windows key, or other special keys may not always be recognized. Check for collisions or test them directly.
 
-Thanks for testing and suggestions:
-*[Finwickle] (https://forums.civfanatics.com/members/finwickle.295463/)*
+## Thanks for testing and suggestions:
+*[Finwickle](https://forums.civfanatics.com/members/finwickle.295463/)*
 *[beezany](https://forums.civfanatics.com/members/beezany.156525/)*
